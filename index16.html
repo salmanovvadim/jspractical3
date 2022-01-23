@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Оператор ветвлений и условий в JavaScript</title>
+    </head>
+
+    <body>
+      <script>
+        /*An input variable that asks the user to enter the start year of training (Ввод переменой запрашивающей у пользователя ввод года начала обучения)*/
+        let year = prompt('В каком году у Вас в группе начал вести занятия Виталий Валентинович?', '' );
+        let year2 = year;
+        let year3 = /^\d+/;
+        year = year2.match(year3);
+
+        //Conditional Operator Example (Пример использования условного оператора)
+        if (year == year2)
+        {
+          if (year != 2021)
+          {
+            alert('А вот..');
+            alert('..и неправильно!');
+          }
+          else
+          {
+            alert('Правильно! именно в 2021 году начато обучение.');
+          }
+        } 
+        else
+        {
+           alert('Введенное значение содержит символы не являющиеся цифрами либо введен заведомо некорректный год начала обучения');
+        }
+      </script>
+    </body>
+
+  </html>

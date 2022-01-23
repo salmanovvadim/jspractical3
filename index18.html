@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Оператор ? и его использование</title>
+    </head>
+
+    <body>
+      <script>
+        //Login request (Запрос логина)
+        let a = prompt('Введите имя пользователя:', 'имя пользователя');
+
+        //Processing of entered data (Обработка введенных данных)
+        let res = (a == 'Вадим') ? 'Привет Вадим, мы ужасно рады видеть Вас на Вашем сайте!!!' : (a == 'Виталий Валентинович') ? 'Здравствуйте Виталий Валентинович! Приветствуем Вас на нашем корпоративном портале!!!' : (a == '') ? 'Нет логина' : 'Вы не авторизованы на нашем сайте, зайдите на страницу регистрации!';
+        
+        //Result output (вывод результата)
+        alert(res);
+      </script>
+    </body>
+    
+  </html>

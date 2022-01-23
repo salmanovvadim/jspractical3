@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Задание 4</title>
+    </head>
+
+    <body>
+      <script>
+        //Data input (Ввод данных)
+        let a = prompt('Введите значение переменной а (переменная может содержать только числовые символы)', '');
+        let b = prompt('Введите значение переменной b (переменная может содержать только числовые символы)', '');
+
+        //Data processing (Обработка данных)
+        let result = (a.length == 0 || b.length == 0) ? 'Вы забыли ввести значениия одной либо нескольких переменных' :
+        ((/[^0-9\d+\.\d+\-]/g.test(a) || a == ' ') && (/[^0-9\d+\.\d+\-]/g.test(b) || b == ' ') && (a + a) == b) ? 'Значения равны' :
+        ((/[^0-9\d+\.\d+\-]/g.test(a) || /\s/g.test(a)) && (/[^0-9\d+\.\d+\-]/g.test(b) || /\s/g.test(b)) && (a + a) != b) ? 'Значения не равны' :
+        (+a + +a == +b) ? 'Значения равны' :
+        (+a + +a != +b) ? 'Значения не равны' :
+
+        'В одной либо нескольких переменных Вы ввели значение не являющееся числовым';
+        //Result output (вывод результата)
+        alert(result);
+      </script>
+    </body>
+
+  </html>

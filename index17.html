@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Оператор ветвлений и условий в JavaScript</title>
+    </head>
+
+    <body>
+      <script>
+        /*An input variable that asks the user to enter the start year of training (Ввод переменой запрашивающей у пользователя ввод года начала обучения)*/
+        let year = prompt('В каком году у Вас в группе начал вести занятия Виталий Валентинович?', '');
+
+        // Validation of entered data (Проверка введенных данных)
+        let year2 = year;
+        let year3 = /\d\d\d\d/;
+        year = year2.match(year3);
+        if (year != year2)
+        {
+          alert('Введенное значение содержит символы не являющиеся цифрами либо введен заведомо некорректный год начала обучения');
+        }
+        //Result output (вывод результата)
+        else if(year < 2021)
+        {
+          alert('Да не может быть! Это слишком рано..');
+        }
+        else if(year > 2021)
+        {
+          alert('Да вы что! Как-то поздновато..');
+        }
+        else
+        {
+          alert('Вы знаток! Да, точно в этом году!');
+        }
+      </script>
+    </body>
+
+  </html>
